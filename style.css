@@ -163,8 +163,9 @@ body {
     flex: 1;
     gap: 5rem;
     align-items: flex-start;
-    opacity: 1;
     transform: translateY(2rem);
+    animation: fadeIn 5s ease-out forwards;
+    margin-top: 3rem;
 }
 
 .socialIcons.show {
@@ -196,13 +197,23 @@ body {
     border-radius: 200px;
     padding-left: 0rem;
     transition: 0.3s ease-in-out;
-    animation-play-state: paused;
+    animation: fadeIn 2.5s ease-out forwards;
 }
 
 .homeImage:hover {
-    animation: spin 3s 1 linear; 
-    animation-play-state: running;
+    
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 
 @keyframes spin {
     from{
@@ -214,6 +225,19 @@ body {
     to{
         transform: rotate(360deg);
     }
+}
+
+.racecarContainer {
+    bottom: 0;
+    left: 0;
+}
+
+.racecarImage {
+    position: absolute;
+    transform: translate(-300px, 100px);
+    width: 300px;
+    margin: 0;
+    bottom: 0;
 }
 
 .sectionProjects {
@@ -303,6 +327,7 @@ body {
 
 .educationTitleBox h2 {
     font-size: 3rem;
+    color:#1D2437
 }
 
 .schoolInfoBox {
@@ -313,6 +338,7 @@ body {
     border: 2px solid #212735;
     border-radius: 0.8rem;
     width: 80%;
+    color: #1D2437;
 }
 
 .school {
@@ -350,6 +376,7 @@ body {
     border-radius: 0.8rem;
     margin-top: 2rem;
     width: 80%;
+    color: #1D2437;
 }
 
 .gradesAndCourses h3 {
@@ -374,7 +401,7 @@ body {
 }
 
 .transcriptDownload:hover {
-
+    color: red;
 }
 
 .courses {
@@ -392,6 +419,7 @@ body {
     border-radius: 0.8rem;
     margin-top: 2rem;
     width: 80%;
+    color: #1D2437;
 }
 
 .clubs {
@@ -409,4 +437,61 @@ body {
     justify-self: flex-start;
     flex: 1;
     font-size: 2rem;
+}
+
+.sectionAboutMe {
+    scroll-margin-top: 80px;
+    display: flex;
+    background-color: #a3a8B2;
+}
+
+.aboutMeOuterBox {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aboutMeTitleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.aboutMeTitleBox h2 {
+    font-size: 3rem;
+}
+
+.aboutMeText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212735;
+    border-radius: 0.8rem;
+    width: 80%;
+    margin-top: 2rem;
+    text-wrap: wrap;
+}
+
+.footerSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #F6D673;
+    border-top: 3px dashed #1D2437;
+}
+
+.footerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1D2437;
+    height: 100%;
+    text-align: center;
 }
