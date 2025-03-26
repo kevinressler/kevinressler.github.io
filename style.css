@@ -2,138 +2,222 @@ html {
     scroll-behavior: smooth;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sora-font {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
 .navBar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #212735;
+    height: 58px;
+    background-color: #1D2437;
     z-index: 1000;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 0px solid black;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    font-family: "Source Code Pro", monospace;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-.navBar h2 {
-    color: white;
-    font-weight: 100;
-}
-
-.navBar ul {
-    justify-content: end;
+.navBarTitle {
     display: flex;
-    list-style: none;
-    margin: 0;
-    gap: 2.8rem;
-    padding-right: 6rem;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: #e7e7e7;
+    
 }
 
-.navBar li a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    transition: all 0.5s ease;
+.navBarTitle h2 {
+    transition: all ease-in 0.2s;
 }
 
-.navBar li a:hover{
-    color: #00BFFF;
+.navBarTitle h2:hover {
+    color: #F6D673;
     transform: translateY(-2px);
 }
 
-.navBar h2 {
+
+.navBarMenu {
     display: flex;
-    justify-content: start;
-    align-items: start;
-    font-weight: bold;
-    padding-left: 8rem;
-    font-size: 1.8rem;
+    flex: 0.5;
+    align-items: center;
+    justify-content: space-around;
+    color: #e7e7e7;
+    padding-right: 10.25rem;
+}
+
+.navBarMenu a {
+    text-decoration: none;
+    color: inherit;
+    transition: all ease-in 0.2s;
+}
+
+.navBarMenu a:hover {
+    color: #F6D673;
+    transform: translateY(-2px);
 }
 
 .mainPage {
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    padding-top: 8rem;
-    background-color: #fafafa;
-
+    width: 100%;
+    height: 100vh;
+    background-color: #e7e7e7;
+    font-size: 1rem;
 }
 
-.mainPageText {
+.mainPageLeft {
     flex: 1;
-    height: 70vh; 
     display: flex; 
-    justify-content: start; 
-    align-items: start; 
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column; 
+    gap: 0rem;
+    border: 0px solid black;
+}
+
+.mainPageLeftText {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex: 1.3;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 0px solid black;
     
-    gap: 0rem; 
-    padding-top: 8rem;
-    padding-left:7rem;
-    font-family: "Source Code Pro", monospace;
-    color: #212735;
+    transform: translate(4rem, 13rem);
+
+    font-size: 3.5vw;
+    color: #1D2437;
 }
 
-.mainPageText p {
-    font-size: 2em;
-    padding: 0;
+.mainPageLeftText p{
+    margin: 0;
+    border: 0px solid black;
+}
+
+.mainPageLeftText h1{
     margin: 0;
 }
 
-.mainPageText h1 {
-    font-size: 3.1em;
-    padding-top: 1rem;
-    margin: 0;
+.line1 {
+    text-align: left;
+    border: 5px solid black;
+}
+
+#line1 {
+    border-right: 3px solid #212735;
+    text-align: left;
+
+}
+
+#line2 {
+    border-right: 0px solid #212735;
+
+}
+
+#line3 {
+    border-right: 0px solid #212735;
+
+}
+
+.blinking {
+    animation: blink 1s step-end 6;
+    border-right: 3px;
+}
+
+@keyframes blink {
+    0%, 100%{ border-color: #212735;}
+    50% {border-color: transparent;}
 }
 
 .socialIcons {
     display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
-    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    gap: 5rem;
+    align-items: flex-start;
+    opacity: 1;
+    transform: translateY(2rem);
+}
+
+.socialIcons.show {
+    opacity: 1;
 }
 
 .socialIcons a {
-    color: #212735;
-    font-size: 3rem;
+    color:#1D2437;
+    font-size: 6vw;
     transition: color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
 }
 
 .socialIcons a:hover {
-    color: #00BFFF;
+    color: #545E85;
     transform: translateY(-2px);
 }
 
 .homeImageBox {
     flex: 1;
-    height: 70vh;
     display: flex;
     justify-content: center;
-    align-items: start;
-    padding-top: 1.25rem;
-    padding-right: 1rem;
+    align-items: center;
 }
 
 .homeImage {
-    width: 75%;
-    max-width: 600px;
+    width: 80%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 200px;
     padding-left: 0rem;
-    transition: all 0.3s ease;
+    transition: 0.3s ease-in-out;
+    animation-play-state: paused;
 }
 
 .homeImage:hover {
-    transform: scale(1.05);
+    animation: spin 3s 1 linear; 
+    animation-play-state: running;
 }
 
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(100deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
-.sections {
-    scroll-margin-top: 80px;
+.sectionProjects {
+    scroll-margin-top: 50px;
     display: flex;
     justify-content: start; 
     align-items: center;
@@ -142,7 +226,13 @@ html {
     gap: 0rem; 
     padding-top: 0rem;
     font-size: 1.8rem;
-    font-family: "Source Code Pro", monospace;
+    color: #212735;
+    background-color: #a3a8B2;
+    border-top: 3px dashed #1D2437;
+}
+
+.sectionsProjects h2 {
+    padding-top: 0.5rem;
 }
 
 
@@ -151,21 +241,31 @@ html {
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
+    max-height: 600px;
 }
   
 .projectBox {
     width: 300px;
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: 3px solid #212735;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     background-color: #f9f9f9;
 }
+
+.projectBox a {
+    text-decoration: none;
+    color: inherit;
+}
   
 .projectBox:hover {
     transform: translateY(-5px);
+    background-color: #212735;
+    color: #e7e7e7;
+    border-color: #F6D673;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
   
 .projectBox h3 {
@@ -180,11 +280,133 @@ html {
     line-height: 1.4;
 }
 
-.source-code-pro {
-    font-family: "Source Code Pro", monospace;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
+.sectionEducation {
+    scroll-margin-top: 80px;
+    display: flex;
+    background-color: #e7e7e7;
 }
 
+.educationOuterBox {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.educationTitleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.educationTitleBox h2 {
+    font-size: 3rem;
+}
+
+.schoolInfoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212735;
+    border-radius: 0.8rem;
+    width: 80%;
+}
+
+.school {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    font-size: 1.8rem;
+}
+
+.degrees {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    font-size: 1.6rem;
+}
+
+.computerScience {
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: #1D2437;
+}
+
+.degrees p {
+    margin: 0;
+    
+}
+
+.gradesAndCourses {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212735;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.gradesAndCourses h3 {
+    font-size: 3rem;
+}
+
+.gpaOuterBox {
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+
+.gpaBox {
+    margin: 0rem;
+}
+
+.transcriptDownload {
+    margin: 0rem;
+}
+
+.transcriptDownload:hover {
+
+}
+
+.courses {
+    display: flex;
+    flex: 1;
+    font-size: 1.7rem;
+    justify-content: center;
+}
+
+.clubsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #212735;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.clubs {
+    display: flex;
+    justify-self: center;
+    flex: 0.3;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+
+}
+
+.clubList {
+    display: flex;
+    justify-self: flex-start;
+    flex: 1;
+    font-size: 2rem;
+}
