@@ -553,6 +553,7 @@ body {
 
 .aboutMeTitleBox h2 {
     font-size: 3rem;
+    color: #1D2437;
 }
 
 .aboutMeText {
@@ -569,6 +570,7 @@ body {
     text-wrap: wrap;
     font-size: 2rem;
     word-spacing: 0.15em;
+    color: #1D2437;
 }
 
 .footerSection {
