@@ -270,7 +270,8 @@ body {
 }
   
 .projectBox {
-    width: 300px;
+    width: 500px;
+    height: 200px;
     padding: 1.5rem;
     border: 3px solid #212735;
     border-radius: 8px;
@@ -280,6 +281,9 @@ body {
 }
 
 .projectBox a {
+    display: block;
+    height: 100%;
+    width: 100%;
     text-decoration: none;
     color: inherit;
 }
@@ -305,7 +309,7 @@ body {
 }
 
 .sectionEducation {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 50px;
     display: flex;
     background-color: #e7e7e7;
 }
@@ -313,10 +317,11 @@ body {
 .educationOuterBox {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-top: 3px dashed #1D2437;
 }
 
 .educationTitleBox {
@@ -345,7 +350,7 @@ body {
     display: flex;
     justify-content: center;
     flex: 1;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
 }
 
 .degrees {
@@ -386,7 +391,7 @@ body {
 .gpaOuterBox {
     display: flex;
     flex-direction: column;
-    flex: 0.7;
+    flex: 0.4;
     justify-content: center;
     align-items: center;
     gap: 0rem;
@@ -406,9 +411,39 @@ body {
 
 .courses {
     display: flex;
-    flex: 1;
+    flex: 1.4;
     font-size: 1.7rem;
     justify-content: center;
+}
+
+.courseListLeft {
+    display: flex;
+    flex: 1.5;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.9rem;
+    gap: 0rem;
+    height: 15vh;
+}
+
+.courseListLeft p {
+    margin:0;
+}
+
+.courseListRight {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.9rem;
+    gap: 0rem;
+    height: 15vh;
+}
+
+.courseListRight p {
+    margin: 0;
 }
 
 .clubsBox {
@@ -425,22 +460,76 @@ body {
 .clubs {
     display: flex;
     justify-self: center;
-    flex: 0.3;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    font-size: 2.3rem;
+    font-size: 3rem;
 
 }
 
 .clubList {
     display: flex;
-    justify-self: flex-start;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     flex: 1;
     font-size: 2rem;
+    gap: 0rem;
+}
+.csc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.pkpf {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clubList p {
+    margin: 0;
+}
+
+.highlightsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212735;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    width: 80%;
+    color: #1D2437;
+}
+
+.highlights {
+    display: flex;
+    flex: 0.65;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.highlightsList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2rem;
+    gap: 0rem;
+}
+
+.highlightsList p {
+    margin: 0;
 }
 
 .sectionAboutMe {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 50px;
     display: flex;
     background-color: #a3a8B2;
 }
@@ -452,6 +541,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-top: 3px dashed #1D2437;
 }
 
 .aboutMeTitleBox {
@@ -474,7 +564,11 @@ body {
     border-radius: 0.8rem;
     width: 80%;
     margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-wrap: wrap;
+    font-size: 2rem;
+    word-spacing: 0.15em;
 }
 
 .footerSection {
