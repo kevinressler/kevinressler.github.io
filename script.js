@@ -13,7 +13,7 @@ function typeLine1() {
     }
     else {
         document.getElementById("line1").style.borderRight = "none"
-        document.getElementById("line2").style.borderRight = "3px solid"
+        document.getElementById("line2").style.borderRight = "3px solid #1D2437"
         setTimeout(typeLine2, speed)
     }
 }
@@ -26,7 +26,7 @@ function typeLine2() {
     }
     else {
         document.getElementById("line2").style.borderRight = "none"
-        document.getElementById("line3").style.borderRight = "3px solid"
+        document.getElementById("line3").style.borderRight = "3px solid #1D2437"
         setTimeout(typeLine3, speed)
     }
 }

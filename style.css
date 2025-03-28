@@ -22,15 +22,21 @@ body, html {
     font-style: normal;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Sora", sans-serif;
     font-weight: 600;
 }
 
-body {
+body, span {
     font-family: "Inter", sans-serif;
     font-weight: 400;
 }
+
+
+
+/* Navbar */
+
+
 
 .navBar {
     position: fixed;
@@ -74,7 +80,7 @@ body {
     align-items: center;
     justify-content: space-around;
     color: #e7e7e7;
-    padding-right: 10.25rem;
+    padding-right: 4vw;
 }
 
 .navBarMenu a {
@@ -88,13 +94,17 @@ body {
     transform: translateY(-2px);
 }
 
+
+
+/* Home Page */
+
+
 .mainPage {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #e7e7e7;
-    font-size: 1rem;
 }
 
 .mainPageLeft {
@@ -115,7 +125,7 @@ body {
     justify-content: flex-end;
     align-items: flex-start;
     border: 0px solid black;
-    margin-left: 3vw;
+    margin-left: 8vw;
     font-size: 3.5vw;
     color: #1D2437;
 }
@@ -129,24 +139,11 @@ body {
     margin: 0;
 }
 
-.line1 {
-    text-align: left;
-    border: 5px solid black;
-}
+
 
 #line1 {
-    border-right: 3px solid #212735;
+    border-right: 3px solid #1D2437;
     text-align: left;
-
-}
-
-#line2 {
-    border-right: 0px solid #212735;
-
-}
-
-#line3 {
-    border-right: 0px solid #212735;
 
 }
 
@@ -164,17 +161,13 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1;
-    gap: 5rem;
+    gap: 5vw;
     align-items: flex-start;
     justify-content: center;
-    transform: translateY(2rem);
-    animation: fadeIn 5s ease-out forwards;
-    margin-top: 3vw;
+    animation: fadeIn 3s ease-out forwards;
+    margin-top: 2vw;
 }
 
-.socialIcons.show {
-    opacity: 1;
-}
 
 .socialIcons a {
     color:#1D2437;
@@ -198,14 +191,10 @@ body {
 .homeImage {
     width: 80%;
     height: auto;
-    border-radius: 200px;
+    border-radius: 15vw;
     padding-left: 0rem;
     transition: 0.3s ease-in-out;
-    animation: fadeIn 2.5s ease-out forwards;
-}
-
-.homeImage:hover {
-    
+    animation: fadeIn 3s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -217,7 +206,7 @@ body {
       opacity: 1;
       transform: scale(1);
     }
-  }
+}
 
 @keyframes spin {
     from{
@@ -231,18 +220,9 @@ body {
     }
 }
 
-.racecarContainer {
-    bottom: 0;
-    left: 0;
-}
 
-.racecarImage {
-    position: absolute;
-    transform: translate(-300px, 100px);
-    width: 300px;
-    margin: 0;
-    bottom: 0;
-}
+/* Projects Section */
+
 
 .sectionProjects {
     scroll-margin-top: 7vh;
@@ -269,7 +249,7 @@ body {
     row-gap: 2vh;
     column-gap: 2vw;
     justify-content: center;
-    padding: 1rem;
+    padding: 4vw;
     /* max-height: 600px; */
 }
   
@@ -278,16 +258,15 @@ body {
     height: 28vh;
     min-width: 450px;
     min-height: 200px;
-    padding: 1.5rem;
+    padding: 1.5vw;
     border: 3px solid #212735;
-    border-radius: 8px;
+    border-radius: 1.5vw;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    background-color: #f9f9f9;
+    background-color: #e7e7e7;
 }
 
 .projectBox a {
-    display: block;
     height: 100%;
     width: 100%;
     text-decoration: none;
@@ -295,8 +274,8 @@ body {
 }
   
 .projectBox:hover {
-    transform: translateY(-5px);
-    background-color: #212735;
+    transform: translateY(-2px);
+    background-color: #1D2437;
     color: #e7e7e7;
     border-color: #F6D673;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -305,17 +284,21 @@ body {
 .projectBox h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2vw;
 }
   
 .projectBox p {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 1.2vw;
+    line-height: 3vh;
 }
 
+
+/* Education Section */
+
+
 .sectionEducation {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 7vh;
     display: flex;
     background-color: #e7e7e7;
 }
@@ -323,7 +306,7 @@ body {
 .educationOuterBox {
     display: flex;
     width: 100%;
-    height: 110vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -337,7 +320,7 @@ body {
 }
 
 .educationTitleBox h2 {
-    font-size: 3rem;
+    font-size: 3.5vw;
     color:#1D2437
 }
 
@@ -346,8 +329,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 2px solid #212735;
-    border-radius: 0.8rem;
+    border: 2px solid #1D2437;
+    border-radius: 2vw;
     width: 80%;
     color: #1D2437;
 }
@@ -356,7 +339,7 @@ body {
     display: flex;
     justify-content: center;
     flex: 1;
-    font-size: 2.1rem;
+    font-size: 2vw;
 }
 
 .degrees {
@@ -364,12 +347,11 @@ body {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    font-size: 1.6rem;
+    font-size: 1.8vw;
 }
 
 .computerScience {
-    font-weight: 800;
-    font-size: 1.7rem;
+    font-weight: 700;
     color: #1D2437;
 }
 
@@ -378,20 +360,22 @@ body {
     
 }
 
+/* GPA and Courses */
+
 .gradesAndCourses {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 2px solid #212735;
-    border-radius: 0.8rem;
-    margin-top: 2rem;
+    border: 2px solid #1D2437;
+    border-radius: 2vw;
+    margin-top: 2.5vh;
     width: 80%;
     color: #1D2437;
 }
 
 .gradesAndCourses h3 {
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
 .gpaOuterBox {
@@ -418,7 +402,6 @@ body {
 .courses {
     display: flex;
     flex: 1.4;
-    font-size: 1.7rem;
     justify-content: center;
 }
 
@@ -428,7 +411,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.9vw;
     gap: 0rem;
     height: 15vh;
 }
@@ -443,7 +426,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1.9rem;
+    font-size: 1.9vw;
     gap: 0rem;
     height: 15vh;
 }
@@ -452,13 +435,16 @@ body {
     margin: 0;
 }
 
+
+/* Clubs */
+
 .clubsBox {
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 2px solid #212735;
-    border-radius: 0.8rem;
-    margin-top: 2rem;
+    border-radius: 2vw;
+    margin-top: 2.5vh;
     width: 80%;
     color: #1D2437;
 }
@@ -469,7 +455,7 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 3vw;
 
 }
 
@@ -480,37 +466,28 @@ body {
     align-items: center;
     flex-direction: column;
     flex: 1;
-    font-size: 2rem;
+    font-size: 2vw;
     gap: 0rem;
-}
-.csc {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.pkpf {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .clubList p {
     margin: 0;
 }
 
+
+/* Highlights */
+
 .highlightsBox {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 2px solid #212735;
-    border-radius: 0.8rem;
-    margin-top: 2rem;
+    border: 2px solid #1D2437;
+    border-radius: 2vw;
+    margin-top: 2.5vh;
     width: 80%;
     color: #1D2437;
+    margin-bottom: 2.5vh;
 }
 
 .highlights {
@@ -518,7 +495,7 @@ body {
     flex: 0.65;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.5vw;
 }
 
 .highlightsList {
@@ -526,7 +503,7 @@ body {
     flex: 1;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 2rem;
+    font-size: 2vw;
     gap: 0rem;
 }
 
@@ -534,8 +511,13 @@ body {
     margin: 0;
 }
 
+
+
+/* About Me Section */
+
+
 .sectionAboutMe {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 7vh;
     display: flex;
     background-color: #a3a8B2;
 }
@@ -543,7 +525,7 @@ body {
 .aboutMeOuterBox {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -558,7 +540,7 @@ body {
 }
 
 .aboutMeTitleBox h2 {
-    font-size: 3rem;
+    font-size: 3vw;
     color: #1D2437;
 }
 
@@ -568,14 +550,13 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid #212735;
-    border-radius: 0.8rem;
+    border-radius: 2vw;
     width: 80%;
-    margin-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
     text-wrap: wrap;
-    font-size: 2rem;
-    word-spacing: 0.15em;
+    font-size: 1.8vw;
+    word-spacing: 0.15vw;
     color: #1D2437;
 }
 
@@ -584,7 +565,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 10vh;
     background-color: #F6D673;
     border-top: 3px dashed #1D2437;
 }
