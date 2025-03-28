@@ -250,6 +250,8 @@ body, span {
     column-gap: 2vw;
     justify-content: center;
     padding: 4vw;
+    padding-top: 0;
+
     /* max-height: 600px; */
 }
   
