@@ -50,3 +50,4 @@ function typeLine3() {
         }, 500);
     }
 }
+ 
