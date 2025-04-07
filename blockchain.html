@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blockchain Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <h1 class="title">Blockchain Simulator</h1>
+
+  <div class="blockchainInstructions">
+    <p>
+      - Edit the <span>Data</span> field to change block content.<br>
+      - The <span>Nonce</span> is the number you can change to manually find a valid hash.<br>
+      - Click <span>Mine</span> to instantly find a valid hash starting with "0000".<br>
+      - The <span>Hash</span> is generated using the Data, Nonce, and Previous Hash for the block.<br>
+      - Blocks are chained using the previous block's hash. Try modifying a block and see all subsequent blocks become invalid.
+    </p>
+  </div>
+
+  <div class="block" id="block1">
+    <h2>Block 1</h2>
+    <label>Data: <input type="text" class="data" value="Genesis Block" /></label><br />
+    <label>Nonce: <input type="number" class="nonce" value="0" /></label><br />
+    <label>Prev Hash: <input type="text" class="prevHash" readonly /></label><br />
+    <label>Hash: <input type="text" class="hash" readonly /></label><br />
+    <button class="mine">Mine this block</button>
+  </div>
+
+  <div class="block" id="block2">
+    <h2>Block 2</h2>
+    <label>Data: <input type="text" class="data" value="User A sends 5 Coins" /></label><br />
+    <label>Nonce: <input type="number" class="nonce" value="0" /></label><br />
+    <label>Prev Hash: <input type="text" class="prevHash" readonly /></label><br />
+    <label>Hash: <input type="text" class="hash" readonly /></label><br />
+    <button class="mine">Mine this block</button>
+  </div>
+
+  <div class="block" id="block3">
+    <h2>Block 3</h2>
+    <label>Data: <input type="text" class="data" value="User A sends 5 Coins" /></label><br />
+    <label>Nonce: <input type="number" class="nonce" value="0" /></label><br />
+    <label>Prev Hash: <input type="text" class="prevHash" readonly /></label><br />
+    <label>Hash: <input type="text" class="hash" readonly /></label><br />
+    <button class="mine">Mine this block</button>
+  </div>
+
+  <div class="block" id="block4">
+    <h2>Block 4</h2>
+    <label>Data: <input type="text" class="data" value="User A sends 5 Coins" /></label><br />
+    <label>Nonce: <input type="number" class="nonce" value="0" /></label><br />
+    <label>Prev Hash: <input type="text" class="prevHash" readonly /></label><br />
+    <label>Hash: <input type="text" class="hash" readonly /></label><br />
+    <button class="mine">Mine this block</button>
+  </div>
+
+  <div class="block" id="block5">
+    <h2>Block 5</h2>
+    <label>Data: <input type="text" class="data" value="User A sends 5 Coins" /></label><br />
+    <label>Nonce: <input type="number" class="nonce" value="0" /></label><br />
+    <label>Prev Hash: <input type="text" class="prevHash" readonly /></label><br />
+    <label>Hash: <input type="text" class="hash" readonly /></label><br />
+    <button class="mine">Mine this block</button>
+  </div>
+
+  <script src="blockchain.js"></script>
+</body>
+</html>
