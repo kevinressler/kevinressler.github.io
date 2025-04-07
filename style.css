@@ -278,6 +278,14 @@ body, span {
     margin-bottom: 2vh;
 }
 
+.projectLinks a {
+    transition: transform 0.3s ease;
+}
+
+.projectLinks a:hover{
+    transform:scale(1.1);
+}
+
 .projectBox a {
     height: 100%;
     width: 100%;
